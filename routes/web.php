@@ -28,3 +28,8 @@ Route::get('profile/{id}', ["uses" => "HomeController@checkMD", "middleware" => 
 Route::group(['middleware' => ['role']], function () {
     Route::get('/list', 'HomeController@userList');
 });
+
+Route::get('/test-for', 'HomeController@testFor');
+
+//route resource
+Route::resource('posts', 'PostController');

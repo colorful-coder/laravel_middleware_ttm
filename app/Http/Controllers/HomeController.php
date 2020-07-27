@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('crud/create');
     }
 
     /**
@@ -47,5 +47,17 @@ class HomeController extends Controller
     public function checkMD($id)
     {
         return view('profile', ['users' => User::findOrFail($id)]);
+    }
+
+    public function testFor()
+    {
+        $limt = 5;
+        for (; true; ) {
+            $limt--;
+            echo  "hello world!<br> ";
+            if ($limt === 0) {
+                break;
+            }
+        }
     }
 }
